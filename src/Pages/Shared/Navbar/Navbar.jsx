@@ -46,7 +46,7 @@ const Navbar = () => {
                                 src={userDefoultPic} />
                         </div>
                     </div>
-                    <Link>
+                    <Link to={'/login'}>
                         <button className='btn px-[20px] py-[5px] ml-2 bg-[#403F3F] text-[20px] font-semibold text-white '>Login</button>
                     </Link>
                 </div>
