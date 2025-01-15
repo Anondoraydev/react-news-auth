@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily: {
         pop: "'Poppins', serif"
+      },
+      colors:{
+        NavColer: "#706F6F"
       }
     },
   },
