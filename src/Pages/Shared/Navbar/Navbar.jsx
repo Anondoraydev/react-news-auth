@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import userDefoultPic from '../../../assets/user.png'
+import { AuthContext } from '../../../Providers/AuthProviders';
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+    const heandelSingOut = () => {
+        logOut()
+        .then()
+        .catch()
+    }
     const navLinks = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/about'}>About</NavLink></li>
@@ -42,13 +49,20 @@ const Navbar = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             <img
-                                alt=" userDefoultPic"
+                                alt="userDefoultPic"
                                 src={userDefoultPic} />
                         </div>
                     </div>
-                    <Link to={'/login'}>
-                        <button className='btn px-[20px] py-[5px] ml-2 bg-[#403F3F] text-[20px] font-semibold text-white '>Login</button>
-                    </Link>
+                    {
+                        user ?
+                            <button onClick={heandelSingOut} className='btn px-[20px] py-[5px] ml-2 bg-[#403F3F] text-[20px] font-semibold text-white '>Sing Out</button>
+                            :
+                            <Link to={'/login'}>
+                                <button className='btn px-[20px] py-[5px] ml-2 bg-[#403F3F] text-[20px] font-semibold text-white '>Login</button>
+                            </Link>
+                    }
+
+
                 </div>
             </div>
         </div>

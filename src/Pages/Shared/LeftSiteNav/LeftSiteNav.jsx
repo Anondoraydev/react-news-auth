@@ -10,7 +10,7 @@ const LeftSiteNav = () => {
     })
     return (
         <div className='space-y-1'>
-            <h2 className="text-xl font-semibold text-black mb-4 ">All Caterogy</h2>
+            <h2 className="text-xl font-semibold text-black mb-4 ">All Caterogy </h2> 
             {
                 categories.map(categoriy =>
                     <Link to={`categoriy/${categoriy.id}`} className='block text-NavColer font-semibold px-[50px] py-3 hover:font-semibold hover:bg-[#E7E7E7] hover:text-gray-500'
