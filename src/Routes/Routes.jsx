@@ -5,6 +5,8 @@ import Login from "../Pages/Login/Login";
 import Reagister from "../Pages/Reagister/Reagister";
 import News from "../Pages/News";
 import PrivateRouts from "./PrivateRouts";
+import About from "../Pages/Home/About";
+import Career from "../Pages/Home/Career";
 
 
 
@@ -26,6 +28,14 @@ const routes = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login />
+            },
+            {
+                path: '/about',
+                element: <About />
+            },
+            {
+                path: '/career',
+                element: <Career />
             },
             {
                 path: '/reagister',
