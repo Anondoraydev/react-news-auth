@@ -7,6 +7,7 @@ import News from "../Pages/News";
 import PrivateRouts from "./PrivateRouts";
 import About from "../Pages/Home/About";
 import Career from "../Pages/Home/Career";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 
@@ -14,6 +15,7 @@ const routes = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
