@@ -26,8 +26,6 @@ const LeftSiteNav = () => {
                         key={categoriy.id}>
                         {categoriy.name}</Link>)
             }
-
-
             {news.map((anews) => (
                 <div key={anews.category_id} className='pb-8'>
                     <img src={anews.author.img} alt="" />
