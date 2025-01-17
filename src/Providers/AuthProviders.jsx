@@ -8,29 +8,38 @@ const auth = getAuth(app);
 
 const AuthProviders = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [lodding, setLodding] = useState(true);
+
 
     const createUser = (email, password) => {
+        setLodding(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const singIn = (email, password) => {
+        setLodding(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const logOut = () => {
+        setLodding(true)
         return signOut(auth);
     }
+
+
     useState(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             console.log('use in the auth stead change', currentUser);
             setUser(currentUser)
+            setLodding(false)
         })
         return () => {
-            unSubscribe()
+            unSubscribe() 
         }
     }, [])
     const authInfo = {
         user,
+        lodding,
         createUser,
         logOut,
         singIn
