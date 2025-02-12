@@ -46,10 +46,11 @@ const NewCard = ({ news }) => {
                     <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-400" />
                     <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-400" />
 
+
                     <p className='pl-2 text-[#706F6F]'>{news.rating.number}</p>
                 </div>
                 <div className='flex items-center gap-2 font-semibold text-[#706F6F]'>
-                    <FaEye/>
+                    <FaEye />
                     <p>{total_view}</p>
                 </div>
             </div>
