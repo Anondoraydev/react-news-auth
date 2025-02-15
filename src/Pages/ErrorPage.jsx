@@ -7,7 +7,7 @@ const ErrorPage = () => {
             <img src={error} alt="" />
 
             <Link to="/" className="bg-teal-500 p-5 mt-5 inline-block text-center rounded-lg mt-5">
-                Go back to Home
+                Go back  to Home
             </Link>
 
 
